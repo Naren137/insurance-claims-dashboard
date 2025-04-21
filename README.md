@@ -9,19 +9,27 @@ This project focuses on analyzing insurance claims data to uncover trends in pro
 
 ---
 
-## 🧱 Data Structure Overview
-The dataset contains structured data from an insurance company with the following key columns:
+## 🧱 Data Preparation Workflow
 
-- `Policy_ID`, `Customer_ID`
-- `Policy_Type`, `Claim_Status`, `Number_of_Claims`
-- `Premium_Amount`, `Claim_Amount`, `Profit`, `Profit_Margin`
-- `Last_Interaction_Date`, `Days_Since_Last_Interaction`, `Policy_Active`
-- `City`, `Age Group Label`, `Year`
+### 1. **Excel – Data Cleaning**
+- Removed blanks and placeholder values (e.g., -1, 'NA')
+- Standardized column formats (dates, numerical values)
+- Filled missing values using logical replacements (e.g., NULLs in `Policy_End_Date`, invalid dates in `Last_Interaction_Date`)
 
-### Cleaning & Preparation
-- Cleaned missing values and invalid entries in **Excel**
-- Transformed and explored data using **SQL** for EDA
-- Created SQL views for key metrics and imported into **Power BI**
+### 2. **SQL – Exploratory Data Analysis (EDA)**
+- Imported cleaned data into SQL
+- Created views for segmentation:
+  - Profitability by age group
+  - Claim amount trends by status and year
+  - Geographic claim distribution
+- Calculated and verified metrics like total profit, average claim amount, and active policy distribution
+
+### 3. **Power BI – Dashboard Creation**
+- Connected SQL views directly to Power BI
+- Built custom DAX measures:
+  - Total Profit, Premium Revenue, Profit Margin (%)
+  - Claim Approval Rate, Claim Count by Policy
+- Created visual hierarchy for executive summaries, detailed trends, and drill-downs
 
 ---
 
@@ -32,37 +40,43 @@ Key findings from the dashboard:
 - **Total Claims Paid**: 109.06M
 - **Total Profit**: 146.47M
 - **Total Claims Filed**: 51.48K
+- **Avg. Profit Margin**: –10.3% (highlighting inefficiencies across some segments)
 
-Despite a healthy overall profit, **Profit Margins** were negative in several segments, indicating inefficiencies and higher relative claim payouts.
+These insights allow insurers to monitor profitability across customer groups and policy types, evaluate high-risk geographies, and improve retention and claim processing.
 
 ---
 
-## 🔍 Insights Deep Dive
+## 🔍 Insights & Business Impact
 
-### 1. **Financial Breakdown by Age Group**
-- 35-44 age group has the **highest premium revenue and profit**
-- Profit and claims are proportional across all groups
+### 1. Financial Breakdown by Age Group
+- **Insight**: The 35–44 age group generated the highest premium revenue and total profit.
+- **Impact**: Marketing campaigns should target this demographic; loyalty rewards or policy upgrades can help retain this high-value group.
 
-### 2. **Claims Trend Over Time**
-- Approved claims remain dominant
-- Rejected claims stay consistent; claim payouts are **highest in 2023**
+### 2. Claims Trend Over Time
+- **Insight**: Approved claims remained stable; pending claims increased slightly.
+- **Impact**: A growing volume of pending claims may signal process bottlenecks. Operational teams should review turnaround times and documentation workflows.
 
-### 3. **Profitability by City**
-- **Chicago, LA, and Phoenix** lead in total profit
-- Cities with lower profits need investigation for performance improvement
+### 3. Profitability by City
+- **Insight**: Chicago, Los Angeles, and Phoenix led in profit. Houston and Denver underperformed.
+- **Impact**: Pricing models should be re-evaluated in underperforming regions. Consider revising risk models or offering reduced coverage in low-profit areas.
 
-### 4. **Claims Distribution by Policy Type & Status**
-- Auto policies have the highest claim volume across all statuses
-- Home and Travel policies have **higher rejection rates**
+### 4. Claims Distribution by Policy Type & Status
+- **Insight**: Auto policies contributed the largest share of claims and profit. Travel policies had high rejection rates.
+- **Impact**: Evaluate underwriting and pricing strategy for Auto policies (profitable but high claim volume). Travel policy terms may need revision to reduce rejections.
+
+### 5. Engagement & Policy Activity
+- **Insight**: Customers with more recent interactions tend to have higher active policy rates.
+- **Impact**: Invest in CRM outreach and re-engagement strategies for customers inactive for 180+ days to reduce churn.
 
 ---
 
 ## ✅ Recommendations
 
-1. **Investigate cities with low profit margins** (e.g., Houston)
-2. **Improve claim processing efficiency** for Auto policies
-3. **Review approval rates** by policy type to reduce unnecessary payouts
-4. Consider **targeted marketing** to the 35-44 age segment to boost revenue
+1. **Refocus acquisition campaigns** on 25–44 age groups in top-profit cities
+2. **Optimize claim processing** and streamline the pending-to-approved pipeline
+3. **Re-evaluate risk models** for underperforming regions
+4. **Enhance product mix** by bundling profitable policy types and retiring loss-makers
+5. **Leverage engagement data** to proactively retain customers with personalized messaging
 
 ---
 
@@ -81,13 +95,20 @@ Despite a healthy overall profit, **Profit Margins** were negative in several se
 ---
 
 ## 📊 Tools Used
-- **Excel** for cleaning nulls, removing outliers
-- **SQL** for aggregations, joins, filtering
-- **Power BI** for visuals, DAX KPIs, slicers & interactions
+- **Excel**: Data cleaning, standardization, and formatting
+- **SQL**: EDA, joins, aggregations, custom metric views
+- **Power BI**: Visualization, KPI cards, DAX, interactive drilldowns, slicers
 
 ---
 
 ## 🚀 Outcome
-This project demonstrates the ability to clean, analyze, and communicate real-world business data using industry tools. It showcases technical skills in SQL and Power BI while addressing stakeholder needs through clear insights and recommendations.
+This project demonstrates:
+- Strong end-to-end workflow across Excel, SQL, and Power BI
+- Advanced dashboarding with stakeholder-facing storytelling
+- Ability to translate raw data into actionable business strategies
 
 ---
+
+**Author:** *[Your Name]*  
+**Portfolio:** [GitHub Profile](https://github.com/yourusername)  
+**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
