@@ -91,7 +91,3 @@ Despite a healthy overall profit, **Profit Margins** were negative in several se
 This project demonstrates the ability to clean, analyze, and communicate real-world business data using industry tools. It showcases technical skills in SQL and Power BI while addressing stakeholder needs through clear insights and recommendations.
 
 ---
-
-**Author:** *[Your Name]*  
-**Portfolio:** [GitHub Profile](https://github.com/yourusername)  
-**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
